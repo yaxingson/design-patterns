@@ -48,6 +48,22 @@ classDiagram
 Observer/Event
 
 
+```mermaid
+classDiagram
+  Observer <|-- ConcreteObserver
+  Subject <|-- ConcreteSubject
+  Subject ..> Observer : observers
+
+  Observer: +update()
+  ConcreteObserver: +update()
+  Subject: +on()
+  Subject: +remove()
+  Subject: +notify()
+  ConcreteSubject: +getState()
+  ConcreteSubject: +setState()
+
+```
+
 ### Single responsibility
 
 Decorator
@@ -61,6 +77,7 @@ Factory method
 Abstract factory
 
 Prototype
+
 
 Builder
 
